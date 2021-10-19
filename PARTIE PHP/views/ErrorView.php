@@ -7,3 +7,4 @@
             <h1>This page does not exist. URL incorrecte.</h1>
       </body>
 </html>
+<?php>
