@@ -1,0 +1,49 @@
+doctype html
+html(lang='fr')
+  head
+    meta(charset='UTF-8')
+    title SportTracks - Inscription
+    link(rel='stylesheet', href='stylesheets/style.css', type='text/css')
+  body.background
+    header
+      h1 Creation de compte
+    form(action='/users', method='POST')
+      label(for='fname') Nom
+      br
+      input#name(type='text', name='fName', required='')
+      br
+      label(for='lname') Prenom
+      br
+      input#pname(type='text', name='pName', required='')
+      br
+      label(for='dateNaiss') Date de naissance
+      br
+      input#start(type='date', name='start', min='1921-01-01', max='2021-10-06', required='')
+      br
+      br
+      label(for='sexe') Sexe
+      br
+      select#sexe(name='sexe', required='')
+        option(type='text', value='h') Homme
+        option(type='text', value='f') Femme
+        option(type='text', value='a') Autres
+      br
+      br
+      label(for='taille') Taille
+      br
+      input#taille(type='text', name='taille', required='')
+      br
+      label(for='poids') Poids
+      br
+      input#poids(type='text', name='poids', required='')
+      br
+      label(for='adrrElec') Adresse electronique
+      br
+      input#email(type='email', name='email', pattern='.+@.+\.com', size='40', required='')
+      br
+      label(for='lname') Mot de passe
+      br
+      input#password(type='password', name='password', pattern='^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$', required='')
+      br
+      br
+      input(type='submit', value="S'inscrire")

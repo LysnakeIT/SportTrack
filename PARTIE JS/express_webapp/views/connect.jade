@@ -1,0 +1,20 @@
+doctype html
+html(lang='fr')
+  head
+    meta(charset='UTF-8')
+    title SportTracks - Connexion
+    link(rel='stylesheet' href='/stylesheets/style.css')
+  body.background
+    header
+      h1 Connexion
+    form(action='/connect', method='POST')
+      label(for='adrrElec') Adresse electronique
+      br
+      input#email(type='email', name='email', pattern='.+@.+\.com', size='40', required='')
+      br
+      label(for='lName') Mot de passe
+      br
+      input#pass(type='password', name='password', pattern='^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$', required='')
+      br
+      br
+      input(type='submit', value='Se connecter')

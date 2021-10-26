@@ -1,0 +1,43 @@
+extends layout
+
+block content
+  #container
+    - if (session)
+        .home
+          ul
+            li
+              a(onclick="modify()") Modifier son profil
+            li
+              a(onclick="upload()") Uploader un fichier JSON
+            li
+              a(onclick="view()") Liste des activites
+            li
+              a(onclick="move()") Déconnexion
+    - else if (session === undefined || session == false)
+        .home
+          ul
+            li
+              a(onclick="connect()") Connexion
+            li
+              a(onclick="create()") Création de profil
+
+
+  script.
+    function move() {
+      window.location.href = '/connect/disconnect'
+    }
+    function modify() {
+      window.location.href = '/modify'
+    }
+    function upload() {
+      window.location.href = '/upload'
+    }
+    function view() {
+      window.location.href = '/activities'
+    }
+    function connect() {
+      window.location.href = '/connect'
+    }
+    function create() {
+      window.location.href = '/users'
+    }

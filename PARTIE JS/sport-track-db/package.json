@@ -1,0 +1,14 @@
+{
+  "name": "sport-track-db",
+  "version": "0.1.0",
+  "description": "database for SportTrack Web Application",
+  "main": "sport-track-db.js",
+  "scripts": {
+    "test": "sport-track-db-test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sqlite3": "^5.0.2"
+  }
+}

@@ -1,0 +1,18 @@
+
+doctype html
+html(lang='fr')
+  head
+    meta(charset='UTF-8')
+    title SportTracks - Activités sportives
+    link(rel='stylesheet' href='stylesheets/style.css')
+  body.background
+    header
+      h1 Activités sportives
+    form#upload(action='/upload', method='POST', enctype='multipart/form-data')
+      label(for='fname') Fichier à charger
+      br
+      br
+      input#fileToUpload(type='file', name='fileToUpload', accept='.json')
+      br
+      br
+      input(type='submit', value='Envoyer le fichier', name='submit')

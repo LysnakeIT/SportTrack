@@ -1,0 +1,47 @@
+doctype html
+html(lang='fr')
+  head
+    meta(charset='UTF-8')
+    title SportTracks - Activités sportives
+    link(rel='stylesheet' href='stylesheets/style.css')
+  body.background
+    header
+      .Activity
+        ul
+          li
+            a(onclick="accueil()") Accueil
+          li
+            a(onclick="upload()") Uploader un fichier JSON
+          li
+            a(onclick="move()") Déconnexion
+      table#activity_table(border='1')
+        thead
+          tr
+            th date activite
+            th description
+            th frequence minimum
+            th frequence maximum
+            th frequence moyenne
+            th temps(secondes)
+            th distance(metres)
+        tbody
+          each val in data
+            tr
+              td= val.date
+              td= val.description
+              td= val.frequenceMinimum
+              td= val.frequenceMaximum
+              td= val.frequenceMoyenne
+              td= val.temps
+              td= val.distance
+          
+  script.
+    function move() {
+      window.location.href = '/connect/disconnect'
+    }
+    function upload() {
+      window.location.href = '/upload'
+    }
+    function accueil() {
+      window.location.href = '/'
+    }
